@@ -15,29 +15,27 @@ import Inicio from './components/Home/Inicio';
 function App() {
 
 
-  
-
-
-
-
-return (
-  <>
-
-
-
-    <BrowserRouter>
-      <Routes>
-         <Route path="/" element={<Inicio/>} /> 
-        <Route path="/formulario" element={<Formulario />} />
-
-
-      </Routes>
-    </BrowserRouter>
 
 
 
 
 
+  return (
+    <>
+    <Header/>
+
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/formulario" element={<Formulario />} />
+          <Route path="/tienda" element={<Tienda />} />
+          <Route path="/carrito" element={<Carrito />} />
+
+
+
+        </Routes>
+      </BrowserRouter>
 
 
 
@@ -46,8 +44,13 @@ return (
 
 
 
-  </>
-);
+
+
+
+
+
+    </>
+  );
 }
 
 export default App;
