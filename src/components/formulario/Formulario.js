@@ -7,7 +7,9 @@ import contacto4 from './contacto4.jpg'
 
 function Formulario() {
 
-
+  const divStyle = {
+    padding: '30px',
+  };
 
 
   return (
@@ -42,7 +44,7 @@ function Formulario() {
   
       </div>
       <div></div>
-              <Form>
+              <Form style={divStyle} >
           <FormGroup row>
             <Label
               for="exampleEmail"

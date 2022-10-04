@@ -22,11 +22,13 @@ function App() {
 
   return (
     <>
-    <Header/>
-    <Main/>
+    
+      
 
 
       <BrowserRouter>
+      <Header />
+        
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/formulario" element={<Formulario />} />
@@ -36,8 +38,9 @@ function App() {
 
 
         </Routes>
+      
       </BrowserRouter>
-      <Footer/>
+      <Footer />
 
 
 
