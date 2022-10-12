@@ -11,7 +11,7 @@ import Tienda from './components/tienda/Tienda';
 import Formulario from './components/formulario/Formulario';
 import Carrito from './components/carrito/Carrito';
 import Inicio from './components/Home/Inicio';
-
+import SobreNosotros from "./components/sobrenosotros/Sobrenosotros";
 function App() {
 
 
@@ -34,7 +34,7 @@ function App() {
           <Route path="/formulario" element={<Formulario />} />
           <Route path="/tienda" element={<Tienda />} />
           <Route path="/carrito" element={<Carrito />} />
-
+          <Route path="/sobrenosotros" element={<SobreNosotros/>}
 
 
         </Routes>

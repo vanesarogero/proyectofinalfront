@@ -1,6 +1,8 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { Form, FormGroup, Label, Col, FormText, Button, Input, Card, CardImg, CardImgOverlay,CardTitle,CardText } from 'reactstrap'
 
 import contacto4 from './contacto4.jpg'
+
 
 
 
@@ -43,9 +45,9 @@ function Formulario() {
 
   
       </div>
-      <div></div>
+      
               <Form style={divStyle} >
-          <FormGroup row>
+          <FormGroup row x>
             <Label
               for="exampleEmail"
               sm={2}
@@ -82,7 +84,7 @@ function Formulario() {
               for="exampleSelect"
               sm={2}
             >
-              Select
+              //Select
             </Label>
             <Col sm={8}>
               <Input
@@ -192,6 +194,7 @@ function Formulario() {
             </Col>
           </FormGroup>
         </Form>
+        
       </nav>
 
 
