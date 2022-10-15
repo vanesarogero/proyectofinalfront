@@ -4,12 +4,15 @@ import { Form, FormGroup, Label, Col, FormText, Button, Input, Card, CardImg, Ca
 import contacto4 from './contacto4.jpg'
 
 
-function Formulario() {
+function Formulario(props) {
 
   const submitHandler = (evt) => {
     evt.preventDefault()
     
-    alert("Ya te avisaremos...")
+    props.setMensaje('Ya te avisaremos')
+    setTimeout(()=>{
+      props.setMensaje('')
+    }, 3000)
   }
 
 

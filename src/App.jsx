@@ -18,6 +18,7 @@ import Footer from "./Permanentes/Footer/Footer";
 import Formulario from "./Pages/Contacto/Formulario";
 import { useEffect } from "react";
 import { getAllProducts, getCategories } from "./Services/ShopApi";
+import Loader from "./Permanentes/Loader";
 
 function App() {
 /**
@@ -33,6 +34,9 @@ function App() {
   const [categorias, setCategorias]     = useState([]);
 
   const [buscando, setBuscando] = useState('');
+
+  const [loading, setLoading] = useState(false);
+  const [mensaje, setMensaje] = useState('');
 
   const addAlCarrito = (articulo) => {
     setCarrito((actualArticulosCarrito)=>{
@@ -72,13 +76,23 @@ function App() {
 
 
   useEffect(()=>{
-    getAllProducts()
-      .then(articulos => setArticulos(articulos))
-      .catch(error => alert("error al pillar los articulos"))
+    setLoading(true)
+    setMensaje('')
 
-    getCategories()
-      .then(categorias => setCategorias(categorias))
-      .catch(error => alert("error al pillar las categorias"))
+    Promise.all([
+      getAllProducts()
+        .then(articulos => setArticulos(articulos)),
+
+      getCategories()
+        .then(categorias => setCategorias(categorias))
+    ]).catch((error) => {
+        setMensaje("Error al conectar con el servicio. "
+                  +"Compruebe su conexión a internet o inténtelo más tarde")
+        setTimeout(()=>setMensaje(''), 5000)
+    }).finally(()=>{
+      setLoading(false)
+    })
+
   }, [])
 
   const navigate = useNavigate()
@@ -112,14 +126,18 @@ function App() {
 
   return (
     <>
-      <Header {...propsHeader} />
+      <Loader loading={loading} mensaje={mensaje} />
+
+      <Header articulosCarrito={articulosCarrito}
+              buscando={buscando}
+              setBuscando={setBuscando} />
       
       <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/formulario" element={<Formulario />} />
+        <Route path="/formulario" element={<Formulario setMensaje={setMensaje} />} />
         <Route path="/tienda" element={<Tienda {...propsTienda} />} />
         <Route path="/carrito" element={<Carrito {...propsCarrito} />} />
-        <Route path="/sobrenosotros" element={<SobreNosotros/>} />
+        <Route path="/sobrenosotros" element={<SobreNosotros />} />
       </Routes>
       
       <Footer />

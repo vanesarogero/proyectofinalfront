@@ -1,5 +1,5 @@
-import { Card, CardBody, CardSubtitle, CardTitle, CardText, Button } from 'reactstrap';
 import { useEffect, useState } from 'react'
+import Articulo from './Articulo'
 
 // ThoughtWorks  CSS
 // Nuria Soriano   codely
@@ -66,34 +66,15 @@ function Tienda(props) {
 
             <section className='row'>
                 {
-                    articulosFiltrados.map((articulo) => {
-                        return (
-                            <Card
-                                key={articulo.id}
-                                color="dark"
-                                outline
-                                style={{ width: '18rem' }}
-                            >
-                                <img alt="Sample" src={articulo.image} />
-                                <CardBody>
-                                    <CardTitle tag="h5">
-                                        {articulo.title}
-                                    </CardTitle>
-                                    <CardSubtitle className="mb-2 text-muted" tag="h6" >
-                                        {articulo.category}
-                                    </CardSubtitle>
-                                    <CardText>
-                                        {articulo.description}
-                                        <br />
-                                        Precio: {articulo.price}€
-                                    </CardText>
-                                    <Button onClick={()=>{props.addAlCarrito(articulo)}}>
-                                        Añadir al carrito
-                                        </Button>
-                                </CardBody>
-                            </Card>
-                        )
-                    })
+                    articulosFiltrados.map(articulo => 
+                        <Articulo id={articulo.id}
+                                  title={articulo.title}
+                                  category={articulo.category}
+                                  description={articulo.description}
+                                  price={articulo.price}
+                                  image={articulo.image}
+                                  addAlCarrito={props.addAlCarrito}/>
+                    )
                 }
             </section>
         </section>

@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import {Card, CardImg, CardImgOverlay,CardTitle, CardText} from "reactstrap";
+
+import fotocarrito from './fotocarrito.jpg';
 
 export default function Carrito(props) {
     /*
@@ -28,6 +31,33 @@ export default function Carrito(props) {
     }, [props.articulosCarrito])
     
     return(
+        <div>
+        <Card inverse>
+          <CardImg
+            alt="Card image cap"
+            src={fotocarrito}
+            style={{
+              height: 450
+
+
+            }}
+            width="100%"
+          />
+          <CardImgOverlay>
+            <CardTitle tag="h5">
+              Carrito
+            </CardTitle>
+            <CardText>
+              Revisa que todo este bien
+            </CardText>
+            <CardText>
+              
+            </CardText>
+          </CardImgOverlay>
+        </Card>
+
+
+      
         <section>
             {articulosCompletos.map(artAndQty =>
                 <article key={artAndQty.product.id}>
@@ -38,6 +68,7 @@ export default function Carrito(props) {
                 </article>
             )}
         </section>
+        </div>
     );
 
 
