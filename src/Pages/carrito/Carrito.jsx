@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {Card, CardImg, CardImgOverlay,CardTitle, CardText} from "reactstrap";
+import {Card, CardImg, CardImgOverlay,CardTitle, CardText, Button} from "reactstrap";
 
 import fotocarrito from './fotocarrito.jpg';
 
@@ -38,8 +38,6 @@ export default function Carrito(props) {
             src={fotocarrito}
             style={{
               height: 450
-
-
             }}
             width="100%"
           />
@@ -54,7 +52,9 @@ export default function Carrito(props) {
               
             </CardText>
           </CardImgOverlay>
+          
         </Card>
+        
 
 
       
@@ -67,10 +67,14 @@ export default function Carrito(props) {
                     <button onClick={()=>props.removeDelCarrito(artAndQty.product)}>-</button>
                 </article>
             )}
+            
         </section>
         </div>
+        
     );
 
 
     
 }
+
+  
