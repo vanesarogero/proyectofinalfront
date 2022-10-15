@@ -3,7 +3,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function Footer() {
     return (
-
         <div>
             <footer className="text-center text-lg-start bg-light text-muted">
                 {/* <!-- Section: Social media --> */}

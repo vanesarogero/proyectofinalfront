@@ -6,4 +6,4 @@ function SobreNosotros() {
         <></>
     )
     }
-    export default SobreNosotros;
+export default SobreNosotros;

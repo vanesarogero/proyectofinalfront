@@ -1,23 +1,12 @@
 function Carousel() {
-    
-    
-    
-    return(
+    return (
         <>
-        
-      
-        
+
+
+
 
         </>
-
-
-
-
-
     );
-
-
-    
 }
 
 

@@ -19,16 +19,19 @@ const items = [
       id: 1,
       altText: 'Slide 1',
       caption: 'Slide 1',
+      img: slider1
     },
     {
       id: 2,
       altText: 'Slide 2',
       caption: 'Slide 2',
+      img: slider2
     },
     {
       id: 3,
       altText: 'Slide 3',
       caption: 'Slide 3',
+      img: slider3
     },
   ];
   
@@ -63,6 +66,7 @@ const items = [
           onExiting={() => setAnimating(true)}
           onExited={() => setAnimating(false)}
         >
+          <img className='w-100' src={item.img}/>
           <CarouselCaption
             className="text-danger"
             captionText={item.caption}
