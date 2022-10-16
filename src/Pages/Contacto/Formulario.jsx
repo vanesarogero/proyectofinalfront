@@ -9,7 +9,7 @@ function Formulario(props) {
   const submitHandler = (evt) => {
     evt.preventDefault()
     
-    props.setMensaje('Ya te avisaremos')
+    props.setMensaje('Nos pondremos en contacto contigo lo antes posible. Gracias por ponerte en contacto con nosotros')
     setTimeout(()=>{
       props.setMensaje('')
     }, 3000)

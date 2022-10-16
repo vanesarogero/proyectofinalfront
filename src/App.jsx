@@ -115,7 +115,8 @@ function App() {
     articulos,
     articulosCarrito, 
     addAlCarrito,
-    removeDelCarrito
+    removeDelCarrito,
+    setMensaje
   }
 
   const propsHeader = {

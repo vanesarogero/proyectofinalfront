@@ -4,6 +4,6 @@ export function getAllProducts() {
 }
 
 export function getCategories() {
-    return fetch('https://fakestoreapi2.com/products/categories')
+    return fetch('https://fakestoreapi.com/products/categories')
         .then(res=>res.json())
 }

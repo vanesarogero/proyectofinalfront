@@ -10,26 +10,26 @@ import React, { useState } from 'react';
 
 import slider1 from './slider1.jpg'
 import slider2 from './slider2.jpg'
-import slider3 from './slider3.jpg'
+import slider3 from './slider3.png'
 
 function HomeCarousel() {
     const items = [
         { 
           id: 1,
-          altText: 'Slide 1',
-          caption: 'Slide 1',
+          altText: 'Joyas',
+          caption: 'Las mejores del mercado.',
           img: slider1
         },
         {
           id: 2,
-          altText: 'Slide 2',
-          caption: 'Slide 2',
+          altText: 'Ropa de mujer y hombre',
+          caption: 'Productos muy selectos',
           img: slider2
         },
         {
           id: 3,
-          altText: 'Slide 3',
-          caption: 'Slide 3',
+          altText: 'Electrónica',
+          caption: 'Últimas novedades del mercado',
           img: slider3
         }
     ];
@@ -67,7 +67,7 @@ function HomeCarousel() {
           <CarouselCaption
             className="text-danger"
             captionText={item.caption}
-            captionHeader={item.caption}
+            captionHeader={item.altText}
           />
         </CarouselItem>
       );
@@ -80,6 +80,7 @@ function HomeCarousel() {
                 max-width: 100%;
                 height: 500px;
                 background: black;
+               
               }`}
         </style>
         <Carousel activeIndex={activeIndex} next={next} previous={previous}>

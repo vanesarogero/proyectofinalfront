@@ -3,16 +3,27 @@ import {Card, CardImg, CardImgOverlay,CardTitle, CardText, Button} from "reactst
 
 import fotocarrito from './fotocarrito.jpg';
 
+
 export default function Carrito(props) {
     /*
     [
         {productId: 7,  quantity: 5}
     ]
 
-    [
-        {product: {...},  quantity: 5}
-    ]
     */
+    
+  
+    const confirmacionPedido = () => {
+      
+      
+      props.setMensaje('Nos ponemos manos a la obra. Gracias por la confianza depositada en nosotros.')
+      setTimeout(()=>{
+        props.setMensaje('')
+      }, 4000)
+    }
+
+
+
     
     const [articulosCompletos, setArticulosCompletos] = useState([])
 
@@ -29,6 +40,8 @@ export default function Carrito(props) {
         })
         setArticulosCompletos(resultado);
     }, [props.articulosCarrito])
+
+    
     
     return(
         <div>
@@ -55,6 +68,7 @@ export default function Carrito(props) {
           
         </Card>
         
+        
 
 
       
@@ -69,6 +83,9 @@ export default function Carrito(props) {
             )}
             
         </section>
+        
+        
+        <Button onClick={confirmacionPedido}>Confirma tu Pedido</Button>
         </div>
         
     );
