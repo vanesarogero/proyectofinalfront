@@ -89,16 +89,16 @@ function Footer() {
                                     Links
                                 </h6>
                                 <p>
-                                    <NavLink href="#!" className="text-reset">Tienda</NavLink>
+                                    <NavLink to="/tienda" className="text-reset">Tienda</NavLink>
                                 </p>
                                 <p>
-                                    <NavLink href="#!" className="text-reset">Carrito</NavLink>
+                                    <NavLink to="/carrito" className="text-reset">Carrito</NavLink>
                                 </p>
                                 <p>
-                                    <NavLink href="#!" className="text-reset">Sobre nosotros</NavLink>
+                                    <NavLink to="/sobrenosotros" className="text-reset">Sobre nosotros</NavLink>
                                 </p>
                                 <p>
-                                    <NavLink href="#!" className="text-reset">Contactanos</NavLink>
+                                    <NavLink to="/formulario" className="text-reset">Contactanos</NavLink>
                                 </p>
                             </div>
                             {/* <!-- Grid column -->

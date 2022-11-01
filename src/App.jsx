@@ -21,13 +21,7 @@ import { getAllProducts, getCategories } from "./Services/ShopApi";
 import Loader from "./Permanentes/Loader";
 
 function App() {
-/**
- * [
- *    { productId: 3,  quantity: 5},
- *    { productId: 6,  quantity: 12},
- * ]
- * 
- */
+
 
   const [articulos, setArticulos]       = useState([]);
   const [articulosCarrito, setCarrito]  = useState([]);
@@ -40,7 +34,7 @@ function App() {
 
   const addAlCarrito = (articulo) => {
     setCarrito((actualArticulosCarrito)=>{
-      //[ {productId: 2, quantity: 6},    {...}   ]
+      
       const nuevoCarrito = structuredClone(actualArticulosCarrito);
 
       let articuloEnCarrito = nuevoCarrito.find(art => art.productId == articulo.id);
@@ -56,7 +50,7 @@ function App() {
   const removeDelCarrito = (articulo) => {
 
     setCarrito((actualArticulosCarrito)=>{
-      //[ {productId: 2, quantity: 6},    {...}   ]
+      
       const nuevoCarrito = structuredClone(actualArticulosCarrito);
 
       let posicionEnCarrito = nuevoCarrito.findIndex(art => art.productId == articulo.id);
@@ -147,13 +141,3 @@ function App() {
 }
 
 export default App;
-//(Revisar esto para el fallo de consola)https://es.reactjs.org/docs/lists-and-keys.html#gatsby-focus-wrapper
-
-/*/* Esto se encontraba en el main antes de crear las rutas.*/
-
-
-/*<select id="select_categorias" onChange={(e) => (filtrarArticulos(e.target.value))}>
-{categorias.map((item, index) => {
-  return <option value={item}>{item}</option>;
-})}
-</select>*/

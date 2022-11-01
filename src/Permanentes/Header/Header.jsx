@@ -7,12 +7,7 @@ import React, { useState } from 'react';
 
 function Header(props) {
 
-  /**
-   * [
-   *    { productId: 3,  quantity: 5},
-   *    { productId: 6,  quantity: 12},
-   * ]
-   */
+
   const cantidadDeArticulosEnCarrito = () => {
     let suma = 0;
 
@@ -43,20 +38,18 @@ function Header(props) {
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
             <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
-            {/* <a className="nav-link active" aria-current="page" href="http://www.google.es">Home</a> */}
-          </li>
+            </li> 
           <li className="nav-item">
             <NavLink to="/tienda" className="nav-link">Tienda</NavLink>
-            {/* <a className="nav-link" href="http://www.google.es">Tienda</a> */}
+            
           </li>
           <li className="nav-item">
             <NavLink to="/carrito" className="nav-link">Carrito ({cantidadDeArticulosEnCarrito()})</NavLink>
-            {/* <a className="nav-link active" aria-current="page" href="http://www.google.es">Carrito</a> */}
+            
           </li>
           <li className="nav-item">
             <NavLink to="/formulario" className="nav-link">Formulario</NavLink>
-            {/* <a className="nav-link active" aria-current="page" href="http://www.google.es">Contacta con nosotros</a> */}
-          </li>
+                      </li>
           <li className="nav-item">
             <NavLink to="/sobrenosotros" className="nav-link">Sobre nosotros</NavLink>
           </li>
@@ -64,14 +57,14 @@ function Header(props) {
         <form className="d-flex" role="search">
           <input className="form-control me-2"
             type="search"
-            placeholder="Buscador de artículos "
+            placeholder="Buscador"
             aria-label="Search"
             onChange={buscadorHandler} />
 
         </form>
       </div>
     </div>
-    </nav >
+    </nav>
 
 
   );

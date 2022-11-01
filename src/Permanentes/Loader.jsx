@@ -1,4 +1,4 @@
-import { Spinner } from "reactstrap";
+
 
 export default function Loader(props) {
     return (
