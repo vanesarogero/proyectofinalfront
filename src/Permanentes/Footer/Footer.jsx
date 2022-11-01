@@ -1,38 +1,44 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import {NavLink} from 'reactstrap'
+
+
 
 function Footer() {
     return (
+        
         <div>
             <footer className="text-center text-lg-start bg-light text-muted">
                 {/* <!-- Section: Social media --> */}
                 <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                     {/* <!-- Left --> */}
                     <div className="me-5 d-none d-lg-block">
-                        <span>Conecta con nosotros</span>
+                        <span>
+                      Conecta con nosotros</span>
+
                     </div>
                     {/* <!-- Left -->
 
                     <!-- Right --> */}
                     <div>
-                        <a href="http://www.google.es" className="me-4 text-reset">
+                        <NavLink href="http://www.google.es" className="me-4 text-reset">
                             <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="http://www.google.es" className="me-4 text-reset">
+                        </NavLink>
+                        <NavLink href="http://www.google.es" className="me-4 text-reset">
                             <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href="http://www.google.es" className="me-4 text-reset">
+                        </NavLink>
+                        <NavLink href="http://www.google.es" className="me-4 text-reset">
                             <i className="fab fa-google"></i>
-                        </a>
-                        <a href="http://www.google.es" className="me-4 text-reset">
+                        </NavLink>
+                        <NavLink href="http://www.google.es" className="me-4 text-reset">
                             <i className="fab fa-instagram"></i>
-                        </a>
-                        <a href="http://www.google.es" className="me-4 text-reset">
+                        </NavLink>
+                        <NavLink href="https://www.linkedin.com/in/vanesa-rogero-paredes-9268a7209/?originalSubdomain=es" className="me-4 text-reset">
                             <i className="fab fa-linkedin"></i>
-                        </a>
-                        <a href="http://www.google.es" className="me-4 text-reset">
+                        </NavLink>
+                        <NavLink href="http://www.google.es" className="me-4 text-reset">
                             <i className="fab fa-github"></i>
-                        </a>
+                        </NavLink>
                     </div>
                     {/* <!-- Right --> */}
                 </section>
@@ -62,13 +68,13 @@ function Footer() {
                                     Productos
                                 </h6>
                                 <p>
-                                    <a href="#!" className="text-reset">Señora</a>
+                                <NavLink to="/tienda" className="text-reset">Tienda</NavLink>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Caballero</a>
+                                <NavLink to="/carrito" className="text-reset">Carrito</NavLink>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Electrónica</a>
+                                <NavLink to="/formulario" className="text-reset">Formulario</NavLink>
                                 </p>
                                 <p>
                                     <a href="#!" className="text-reset">REVISA LOS CAMPOS DE LA API</a>
@@ -83,16 +89,16 @@ function Footer() {
                                     Links
                                 </h6>
                                 <p>
-                                    <a href="#!" className="text-reset">Tienda</a>
+                                    <NavLink href="#!" className="text-reset">Tienda</NavLink>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Carrito</a>
+                                    <NavLink href="#!" className="text-reset">Carrito</NavLink>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Sobre nosotros</a>
+                                    <NavLink href="#!" className="text-reset">Sobre nosotros</NavLink>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Contactanos</a>
+                                    <NavLink href="#!" className="text-reset">Contactanos</NavLink>
                                 </p>
                             </div>
                             {/* <!-- Grid column -->

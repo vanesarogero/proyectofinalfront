@@ -49,7 +49,7 @@ function Tienda(props) {
     }, [props.buscando, props.articulos, categoriaActual])
 
     return (
-        <section>
+        <section >
             {props.buscando === '' &&
             <select name="" 
                     id=""

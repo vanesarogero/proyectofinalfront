@@ -1,15 +1,16 @@
 import { Card, CardBody, CardSubtitle, CardTitle, CardText, Button } from 'reactstrap';
-
+/*import  from "src/index.css"*/
 function Articulo(props) {
     
     return (
+        <article className= "card">
         <Card
             key={props.id}
             color="dark"
             outline
             style={{ width: '18rem' }}
         >
-            <img alt="Sample" src={props.image} />
+            <img alt="Sample" src={props.image} className= "imagen_tienda "/>
             <CardBody>
                 <CardTitle tag="h5">
                     {props.title}
@@ -27,6 +28,7 @@ function Articulo(props) {
                     </Button>
             </CardBody>
         </Card>
+        </article>
     )
 
 

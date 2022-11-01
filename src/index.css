@@ -43,3 +43,13 @@ code {
   0% { transform: rotate(0);}
   100% { transform: rotate(360deg);}
 }
+.imagen_tienda{
+ max-width: 15rem;
+ max-height: 15rem;
+ }
+.card{
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ flex-flow: row wrap;
+}
