@@ -3,12 +3,13 @@ import { Card, CardBody, CardSubtitle, CardTitle, CardText, Button } from 'react
 function Articulo(props) {
     
     return (
-        <Card
+    
+        <Card className='card_articulos'
             key={props.id}
             color="dark"
             tag='article'
             outline
-            style={{ width: '18rem' }}
+            style={{ width: '21rem' }}
         >
             <img alt="Sample" src={props.image} className= "imagen_tienda "/>
             <CardBody>
@@ -28,6 +29,7 @@ function Articulo(props) {
                     </Button>
             </CardBody>
         </Card>
+       
     )
 
 

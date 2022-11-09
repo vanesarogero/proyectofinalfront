@@ -4,6 +4,7 @@ import {NavLink} from 'reactstrap'
 
 
 
+
 function Footer() {
     return (
         
@@ -13,34 +14,9 @@ function Footer() {
                 <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                     {/* <!-- Left --> */}
                     <div className="me-5 d-none d-lg-block">
-                        <span>
-                      Conecta con nosotros</span>
-
+                        
                     </div>
-                    {/* <!-- Left -->
-
-                    <!-- Right --> */}
-                    <div>
-                        <NavLink href="http://www.google.es" className="me-4 text-reset">
-                            <i className="fab fa-facebook-f"></i>
-                        </NavLink>
-                        <NavLink href="http://www.google.es" className="me-4 text-reset">
-                            <i className="fab fa-twitter"></i>
-                        </NavLink>
-                        <NavLink href="http://www.google.es" className="me-4 text-reset">
-                            <i className="fab fa-google"></i>
-                        </NavLink>
-                        <NavLink href="http://www.google.es" className="me-4 text-reset">
-                            <i className="fab fa-instagram"></i>
-                        </NavLink>
-                        <NavLink href="https://www.linkedin.com/in/vanesa-rogero-paredes-9268a7209/?originalSubdomain=es" className="me-4 text-reset">
-                            <i className="fab fa-linkedin"></i>
-                        </NavLink>
-                        <NavLink href="http://www.google.es" className="me-4 text-reset">
-                            <i className="fab fa-github"></i>
-                        </NavLink>
-                    </div>
-                    {/* <!-- Right --> */}
+                  
                 </section>
                 {/* <!-- Section: Social media -->
 
@@ -56,7 +32,7 @@ function Footer() {
                                     <i className="fas fa-gem me-3"></i>Vane Tienda
                                 </h6>
                                 <p>
-                                    ESCRIBIR ALGO SOBRE LA TIENDA ALGO DE TEXTO 
+                                    Este es mi proyecto de React 
                                 </p>
                             </div>
                             {/* {/* <!-- Grid column --> */}
@@ -68,17 +44,15 @@ function Footer() {
                                     Productos
                                 </h6>
                                 <p>
-                                <NavLink to="/tienda" className="text-reset">Tienda</NavLink>
+                                <NavLink to="/tienda" >Tienda</NavLink>
                                 </p>
                                 <p>
-                                <NavLink to="/carrito" className="text-reset">Carrito</NavLink>
+                                <NavLink to="/carrito" >Carrito</NavLink>
                                 </p>
                                 <p>
-                                <NavLink to="/formulario" className="text-reset">Formulario</NavLink>
+                                <NavLink to="/formulario" >Formulario</NavLink>
                                 </p>
-                                <p>
-                                    <a href="#!" className="text-reset">REVISA LOS CAMPOS DE LA API</a>
-                                </p>
+                                
                             </div>
                             {/* <!-- Grid column -->
 
@@ -113,7 +87,7 @@ function Footer() {
                                     vanesarogero@gmail.com
                                 </p>
                                 <p><i className="fas fa-phone me-3"></i> + 34 662 68 40 53</p>
-                                <p><i className="fas fa-print me-3"></i> LINKEDIN</p>
+                                <p><i className="fas fa-print me-3"></i><NavLink to="https://www.linkedin.com/in/vanesarogero-programadora-front-end/" >LINKEDIN</NavLink></p>
                             </div>
                             {/* <!-- Grid column --> */}
                         </div>

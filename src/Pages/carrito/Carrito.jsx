@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card, CardImg, CardImgOverlay, CardBody, CardSubtitle, CardTitle, CardText, Button } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardBody, CardSubtitle, CardTitle, Button, CardText } from 'reactstrap';
 
 import fotocarrito from './fotocarrito.jpg';
 
@@ -50,6 +50,10 @@ export default function Carrito(props) {
     
     
     return(
+      <>
+
+      
+
         <div>
         <Card inverse>
           <CardImg
@@ -77,15 +81,18 @@ export default function Carrito(props) {
         
 
 
-      
+        <section></section>
         <section className="carrito">
             {articulosCompletos.map(artAndQty =>
-                <Card
+                <Card className="carrito_card"
                 key={artAndQty.product.id}
                 color="dark"
                 tag='article'
                 outline
-                style={{ width: '18rem',}}
+                style={{ 
+                  width: '18rem',
+                  
+                 }}
             >
                 <img alt="Sample" src={artAndQty.product.image} className= "imagen_tienda "/>
                 <CardBody>
@@ -98,32 +105,32 @@ export default function Carrito(props) {
                     <CardText>
                         Precio: {artAndQty.product.price}€
                     </CardText>
-                    <Button onClick={()=>props.addAlCarrito(artAndQty.product)}>+</Button>
-                    <span>x{artAndQty.quantity}</span>
-                    <Button onClick={()=>props.removeDelCarrito(artAndQty.product)}>-</Button>
-
-                    <div>{ (artAndQty.quantity * artAndQty.product.price).toFixed(2) } €</div>
+                    <div className="botones_compra">
+                    <Button className="carrito_card_mas" onClick={()=>props.addAlCarrito(artAndQty.product)}>+</Button>
+                    <span className="carrito_card_numero">{artAndQty.quantity}</span>
+                    <Button className="carrito_card_menos" onClick={()=>props.removeDelCarrito(artAndQty.product)}>-</Button>
+                    </div>
+                    <CardText className="total_producto">{ (artAndQty.quantity * artAndQty.product.price).toFixed(2) } €
+                    </CardText>
                 </CardBody>
             </Card>
-
-
-                /*<article key={artAndQty.product.id}>
-                    <img src={artAndQty.product.image} alt="" />
-                    <h1>{artAndQty.product.title} (<span>{artAndQty.quantity}</span>)</h1>
-
-                    <button onClick={()=>props.addAlCarrito(artAndQty.product)}>+</button>
-                    <button onClick={()=>props.removeDelCarrito(artAndQty.product)}>-</button>
-                </article>*/
+               
             )}
             
         </section>
         
         
         <section>
-          <span>Total: {total}</span><br></br>
-          <Button type ='button' className= 'confirmar_pedido' onClick={confirmacionPedido} >Confirma tu Pedido</Button>
+          <CardText className='total'>Total: {total}</CardText>
+          <div>
+            {articulosCompletos.length === 0 && <p> No tienes artículos en el carrito</p>}
+            {articulosCompletos.length >= 1 && <Button type ='button' className= 'confirmar_pedido' onClick={confirmacionPedido} >Confirma tu Pedido</Button>}
+
+          </div>
+          
         </section>
         </div>
+        </>
         
     );
 

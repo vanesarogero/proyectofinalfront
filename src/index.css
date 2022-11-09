@@ -46,6 +46,7 @@ code {
 .imagen_tienda{
  max-width: 15rem;
  max-height: 15rem;
+ align:center;
  }
 .card{
  display: flex;
@@ -53,3 +54,92 @@ code {
  flex-direction: row;
  flex-flow: row wrap;
 }
+
+.carousel-img {
+  height: 100%;
+}
+carrito
+.carrito{
+  display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ flex-flow: row wrap;
+ margin-top: 50px;
+ margin-bottom: 30px;
+ justify-content: space-between;
+}
+
+.carrito_card{
+margin-bottom: 20px;
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.botones_compra{
+  display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ flex-flow: row wrap;
+ margin-top: 50px;
+ margin-bottom: 30px;
+ justify-content: center;
+ align-items: center;
+}
+.carrito_card_mas{
+  margin-left: -10px;
+
+}
+.carrito_card_numero{
+  margin-right: 10px;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
+.total_producto{
+  display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ flex-flow: row wrap;
+ justify-content: center;
+ align-items: center;
+}
+
+.confirmar_pedido{
+  margin-top: 15px;
+  position:absolute; 
+    width:50%; left:0;
+    text-align:center;
+    margin-left: 25%;
+    margin-right:25%;
+  margin-bottom: 50px;
+  font-size: larger;
+}
+.total{
+  font-size: large;
+  text-align: center;
+}
+tienda
+.secciones{
+  display: flex;
+  margin: auto;
+  
+}
+.secciones_producto{
+  
+  font-size: larger;
+  margin-bottom: 50px;
+ margin-left: 3%;
+  margin-top: 25px;
+    
+}
+.row{
+  --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin-right: auto;
+    margin-left: auto;
+}
+

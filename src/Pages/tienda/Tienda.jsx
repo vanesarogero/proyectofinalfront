@@ -49,9 +49,10 @@ function Tienda(props) {
     }, [props.buscando, props.articulos, categoriaActual])
 
     return (
-        <section >
+        <section className='secciones' >
             {props.buscando === '' &&
-            <select name="" 
+            <select className='secciones_producto'
+                    name="" 
                     id=""
                     onChange={(evt)=>setCategoriaActual(evt.target.value)}>
                 <option value="todas">Todas</option>
