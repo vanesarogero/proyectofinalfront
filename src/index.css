@@ -46,7 +46,7 @@ code {
 .imagen_tienda{
  max-width: 15rem;
  max-height: 15rem;
- align:center;
+ align-items:center;
  }
 .card{
  display: flex;
@@ -131,6 +131,7 @@ tienda
   margin-bottom: 50px;
  margin-left: 3%;
   margin-top: 25px;
+  
     
 }
 .row{
@@ -142,4 +143,15 @@ tienda
     margin-right: auto;
     margin-left: auto;
 }
+.noarticulos{
+  text-align: center;
+  font-size: large;
+}
+
+footer
+
+.text-reset{
+  text-decoration:none;
+}
+
 

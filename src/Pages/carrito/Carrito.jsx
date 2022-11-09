@@ -68,12 +68,8 @@ export default function Carrito(props) {
             <CardTitle tag="h5">
               Carrito
             </CardTitle>
-            <CardText>
-              Revisa que todo este bien
-            </CardText>
-            <CardText>
-              
-            </CardText>
+            <CardText>Revisa que todo este bien</CardText>
+            <CardText></CardText>
           </CardImgOverlay>
           
         </Card>
@@ -123,7 +119,7 @@ export default function Carrito(props) {
         <section>
           <CardText className='total'>Total: {total}</CardText>
           <div>
-            {articulosCompletos.length === 0 && <p> No tienes artículos en el carrito</p>}
+            {articulosCompletos.length === 0 && <p className="noarticulos"> No tienes artículos en el carrito</p>}
             {articulosCompletos.length >= 1 && <Button type ='button' className= 'confirmar_pedido' onClick={confirmacionPedido} >Confirma tu Pedido</Button>}
 
           </div>

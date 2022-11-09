@@ -1,11 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import {NavLink} from 'reactstrap'
+import {NavLink} from "react-router-dom"
 
 
 
 
 function Footer() {
+    const handleClick = ()=>{
+        window.open('https://www.linkedin.com/in/vanesarogero-programadora-front-end/', '_blank')
+        }
     return (
         
         <div>
@@ -32,31 +35,12 @@ function Footer() {
                                     <i className="fas fa-gem me-3"></i>Vane Tienda
                                 </h6>
                                 <p>
-                                    Este es mi proyecto de React 
+                                    Este es mi proyecto de React en el que tengo que crear una ecommerce, haciendo una llamada a una API para obtener los artículos de la tienda.  
                                 </p>
                             </div>
-                            {/* {/* <!-- Grid column --> */}
+                            
 
-                            {/* <!-- Grid column --> */} 
-                            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                {/* <!-- Links --> */}
-                                <h6 className="text-uppercase fw-bold mb-4">
-                                    Productos
-                                </h6>
-                                <p>
-                                <NavLink to="/tienda" >Tienda</NavLink>
-                                </p>
-                                <p>
-                                <NavLink to="/carrito" >Carrito</NavLink>
-                                </p>
-                                <p>
-                                <NavLink to="/formulario" >Formulario</NavLink>
-                                </p>
-                                
-                            </div>
-                            {/* <!-- Grid column -->
-
-                            <!-- Grid column --> */}
+                            
                             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                                 {/* <!-- Links --> */}
                                 <h6 className="text-uppercase fw-bold mb-4">
@@ -67,9 +51,6 @@ function Footer() {
                                 </p>
                                 <p>
                                     <NavLink to="/carrito" className="text-reset">Carrito</NavLink>
-                                </p>
-                                <p>
-                                    <NavLink to="/sobrenosotros" className="text-reset">Sobre nosotros</NavLink>
                                 </p>
                                 <p>
                                     <NavLink to="/formulario" className="text-reset">Contactanos</NavLink>
@@ -87,7 +68,7 @@ function Footer() {
                                     vanesarogero@gmail.com
                                 </p>
                                 <p><i className="fas fa-phone me-3"></i> + 34 662 68 40 53</p>
-                                <p><i className="fas fa-print me-3"></i><NavLink to="https://www.linkedin.com/in/vanesarogero-programadora-front-end/" >LINKEDIN</NavLink></p>
+                                <p><i className="fas fa-phone me-3"></i><NavLink className="text-reset" onClick={handleClick} >LINKEDIN</NavLink></p>
                             </div>
                             {/* <!-- Grid column --> */}
                         </div>

@@ -12,7 +12,6 @@ import { useState } from "react";
 import Inicio from "./Pages/Home/Inicio";
 import Tienda from "./Pages/tienda/Tienda";
 import Carrito from "./Pages/carrito/Carrito";
-import SobreNosotros from "./Pages/sobrenosotros/Sobrenosotros";
 import Header from "./Permanentes/Header/Header";
 import Footer from "./Permanentes/Footer/Footer";
 import Formulario from "./Pages/Contacto/Formulario";
@@ -132,7 +131,7 @@ function App() {
         <Route path="/formulario" element={<Formulario setMensaje={setMensaje} />} />
         <Route path="/tienda" element={<Tienda {...propsTienda} />} />
         <Route path="/carrito" element={<Carrito {...propsCarrito} />} />
-        <Route path="/sobrenosotros" element={<SobreNosotros />} />
+        
       </Routes>
       
       <Footer />
