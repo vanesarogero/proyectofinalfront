@@ -3,10 +3,10 @@ import { Card, CardBody, CardSubtitle, CardTitle, CardText, Button } from 'react
 function Articulo(props) {
     
     return (
-        <article className= "card">
         <Card
             key={props.id}
             color="dark"
+            tag='article'
             outline
             style={{ width: '18rem' }}
         >
@@ -28,7 +28,6 @@ function Articulo(props) {
                     </Button>
             </CardBody>
         </Card>
-        </article>
     )
 
 

@@ -63,7 +63,7 @@ function HomeCarousel() {
           onExiting={() => setAnimating(true)}
           onExited={() => setAnimating(false)}
         >
-          <img className='w-100' src={item.img}/>
+          <img className='w-100 carousel-img' src={item.img}/>
           <CarouselCaption
             className="text-danger"
             captionText={item.caption}
@@ -78,10 +78,8 @@ function HomeCarousel() {
         <style>
           {`.custom-tag {
                 max-width: 100%;
-                height: 500px;
                 background: black;
-               
-              }`}
+            }`}
         </style>
         <Carousel activeIndex={activeIndex} next={next} previous={previous}>
           <CarouselIndicators
