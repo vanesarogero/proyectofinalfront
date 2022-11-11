@@ -72,7 +72,8 @@ export default function Carrito(props) {
           
         </Card>
         
-        <section className="carrito">
+        <section >
+          <article className="carrito">
             {articulosCompletos.map(artAndQty =>
                 <Card 
                 key={artAndQty.product.id}
@@ -80,7 +81,7 @@ export default function Carrito(props) {
                 tag='article'
                 outline
                 style={{ 
-                  width: '18rem',
+                  width: '25rem',
                   
                  }}
             >
@@ -106,7 +107,7 @@ export default function Carrito(props) {
             </Card>
                
             )}
-            
+            </article> 
         </section>
         
         

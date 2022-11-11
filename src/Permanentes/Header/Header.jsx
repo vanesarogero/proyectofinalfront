@@ -50,9 +50,7 @@ function Header(props) {
           <li className="nav-item">
             <NavLink to="/formulario" className="nav-link">Formulario</NavLink>
                       </li>
-          <li className="nav-item">
-            <NavLink to="/sobrenosotros" className="nav-link">Sobre nosotros</NavLink>
-          </li>
+          
         </ul>
         <form className="d-flex" role="search">
           <input className="form-control me-2"

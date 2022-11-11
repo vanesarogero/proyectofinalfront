@@ -58,10 +58,13 @@ code {
 .carousel-img {
   height: 100%;
 }
-carrito
+
 .carrito{
   display: flex;
-  
+  justify-content: center;
+  flex-wrap: wrap;
+ flex-direction: row;
+ flex-flow: row wrap;
  }
 
 
@@ -111,8 +114,10 @@ carrito
   text-align: center;
 }
 tienda
+
 .secciones{
   display: flex;
+  
   
   
 }
