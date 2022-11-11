@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import Articulo from './Articulo'
 
-// ThoughtWorks  CSS
-// Nuria Soriano   codely
 
 function Tienda(props) {
 
@@ -12,7 +10,7 @@ function Tienda(props) {
     useEffect(()=>{
         if (props.buscando !== '') {
             const articulosEncontrados = []
-               // props.articulos.filter(art => art.title.includes(props.buscando))
+               
 
             for(let i = 0; i < props.articulos.length; i++) {
                 const art = props.articulos[i];
@@ -34,17 +32,7 @@ function Tienda(props) {
             }
             setArticulosFiltrados(articulosDeLaCategoria)
         }
-        // Opción funcional 1
-        // const articulosDeLaCategoria = []
-        //     props.articulos.filter(art => art.category == categoriaActual)
         
-        /*
-        Opción funcional 2
-        props.articulos.forEach(art => {
-            if(art.category == categoriaActual) {
-                articulosDeLaCategoria.push(art);
-            }
-        })*/
 
     }, [props.buscando, props.articulos, categoriaActual])
 

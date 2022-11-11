@@ -61,19 +61,10 @@ code {
 carrito
 .carrito{
   display: flex;
- flex-wrap: wrap;
- flex-direction: row;
- flex-flow: row wrap;
- margin-top: 50px;
- margin-bottom: 30px;
- justify-content: space-between;
-}
+  
+ }
 
-.carrito_card{
-margin-bottom: 20px;
-margin-right: 10px;
-margin-left: 10px;
-}
+
 
 .botones_compra{
   display: flex;
@@ -122,7 +113,7 @@ margin-left: 10px;
 tienda
 .secciones{
   display: flex;
-  margin: auto;
+  
   
 }
 .secciones_producto{

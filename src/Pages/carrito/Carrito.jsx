@@ -52,8 +52,6 @@ export default function Carrito(props) {
     return(
       <>
 
-      
-
         <div>
         <Card inverse>
           <CardImg
@@ -74,13 +72,9 @@ export default function Carrito(props) {
           
         </Card>
         
-        
-
-
-        <section></section>
-        <section className="carrito">
+        <section >
             {articulosCompletos.map(artAndQty =>
-                <Card className="carrito_card"
+                <Card 
                 key={artAndQty.product.id}
                 color="dark"
                 tag='article'
@@ -90,7 +84,7 @@ export default function Carrito(props) {
                   
                  }}
             >
-                <img alt="Sample" src={artAndQty.product.image} className= "imagen_tienda "/>
+                <img alt="Sample" src={artAndQty.product.image} className= "imagen_tienda"/>
                 <CardBody>
                     <CardTitle tag="h5">
                         {artAndQty.product.title}
