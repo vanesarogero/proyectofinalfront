@@ -72,7 +72,7 @@ export default function Carrito(props) {
           
         </Card>
         
-        <section >
+        <section className="carrito">
             {articulosCompletos.map(artAndQty =>
                 <Card 
                 key={artAndQty.product.id}
